@@ -10,6 +10,15 @@
         position: absolute
         bottom: 0
         max-width: 100%
+        +xl
+            right: -150px
+        +lg
+            right: -250px
+        +md
+            right: -400px
+            overflow: hidden
+        +sm
+            width: auto
     &__img
         background-image: url(../img/bg-header.png)
         background-repeat: no-repeat
@@ -18,5 +27,3 @@
         background-size: contain
         width: 100%
         height: 100%
-        +md
-            display: none

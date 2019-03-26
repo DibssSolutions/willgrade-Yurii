@@ -1,0 +1,91 @@
+.nav
+	position: static
+	z-index: 2
+	&__icon
+		display: none
+		width: 33px
+		height: 30px
+		position: relative
+		cursor: pointer
+		+lg
+			position: absolute
+			z-index: 1
+			top: 50%
+			left: 0
+			display: block
+	&__icon span
+		display: block
+		position: absolute
+		height: 3px
+		width: 100%
+		background-color: #ffffff
+		opacity: 1
+		left: 0
+		transform: rotate(0deg)
+		transition: 0.4s
+	&__icon span:nth-child(1)
+		top: 0px
+	&__icon span:nth-child(2)
+		top: 13px
+	&__icon span:nth-child(3)
+		top: 13px
+	&__icon span:nth-child(4)
+		top: 26px
+	&.menu_stage_open span:nth-child(1)
+		top: 18px
+		width: 0%
+		left: 50%
+	&.menu_stage_open span:nth-child(2)
+		transform: rotate(45deg)
+		background-color: #0067df
+	&.menu_stage_open .nav__icon span:nth-child(3)
+		transform: rotate(-45deg)
+		background-color: #0067df
+	&.menu_stage_open .nav__icon span:nth-child(4)
+		top: 18px
+		width: 0%
+		left: 50%
+	&.menu.menu_stage_open .nav__item
+		+lg
+			display: block
+	&.menu.menu_stage_open .nav__link
+		+lg
+			display: block
+	&__list
+		transition: 0.5s
+		+lg
+			width: 310px
+			box-shadow: 0 2px 30px 2px rgba(39, 47, 56, 0.46)
+			background-color: #ececec
+			position: fixed
+			left: -310px
+			top: 0
+			bottom: 0
+			transition: all ease 0.5s
+			padding-top: 145px
+			padding-left: 60px
+	&__item
+		display: inline-block
+		margin-right: 40px
+		&:last-child
+			margin-right: 0
+		+lg
+			display: block
+			margin-bottom: 48px
+			margin-right: 0
+	&__link
+		display: block
+		color: #1c2228
+		font-size: 18px
+		text-transform: uppercase
+		text-decoration: none
+		transition: 0.3s
+		+xxl
+			font-size: 16px
+		+lg
+			font-size: 18px
+			font-weight: 700
+			letter-spacing: -0.09px
+
+.s
+	left: 0 !important

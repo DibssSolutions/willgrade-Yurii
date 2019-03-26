@@ -1,0 +1,31 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+$familyGilroy: 'Gilroy'
+
+=gilroy
+	font-family: 'Gilroy', Arial, -apple-system, BlinkMacSystemFont, 'Oxygen', sans-serif
+
+
+// Gilroy
+@font-face
+  +fontdefault(normal, 300, $familyGilroy)
+  +fontpath('Gilroy-Light', 'Gilroy-Light', Gilroy-Light)
+
+@font-faces
+	+fontdefault(normal, 400, $familyGilroy)
+	+fontpath('Gilroy', 'Gilroy', Gilroy)
+@font-face
+	+fontdefault(italic, 400, $familyGilroy)
+	+fontpath('Gilroy-Italic', 'Gilroy-Italic', Gilroy-Italic)
+@font-face
+	+fontdefault(normal, 700, $familyGilroy)
+	+fontpath('Gilroy-Bold', 'Gilroy-Bold', Gilroy-Bold)
+@font-face
+	+fontdefault(italic, 700, $familyGilroy)
+	+fontpath('Gilroy-BoldItalic', 'Gilroy-BoldItalic', Gilroy-BoldItalic)

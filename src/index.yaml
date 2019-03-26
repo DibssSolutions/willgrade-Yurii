@@ -1,0 +1,5 @@
+ProjectTitle: template
+
+PageList:
+- file: startPage.html
+  ready: 50

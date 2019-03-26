@@ -1,0 +1,66 @@
+.hero
+    &_inner
+        position: absolute
+        top: 50%
+        left: 30%
+        transform: translate(-30%, -50%)
+        z-index: 1
+        +md
+            left: 10%
+            transform: translate(0%, -50%)
+            padding-right: 30px
+    &__logo
+        padding-bottom: 114px
+        +xl
+            padding-bottom: 80px
+        +md
+            padding-bottom: 40px
+    &__logo img
+        display: block
+        width: 446px
+        max-width: 100%
+    &__title
+        padding-bottom: 54px
+        +xl
+            padding-bottom: 40px
+    &__desc
+        color: #ececec
+        font-size: 18px
+        font-weight: 400
+        line-height: 28px
+        letter-spacing: -0.09px
+        margin-left: -10px
+        margin-bottom: 80px
+        +xl
+            margin-bottom: 50px
+    &__buttons
+        display: flex
+        align-items: center
+        +xl
+            flex-direction: column
+            align-items: flex-start
+        +md
+            align-items: center
+    &__btn-video
+        padding-left: 90px
+        display: flex
+        align-items: center
+        +xxl
+            padding-left: 50px
+        +xl
+            padding-left: 0px
+            padding-top: 50px
+        +md
+            flex-direction: column
+    &__btn-video img
+        display: block
+        cursor: pointer
+    &__btn-video span
+        padding-left: 25px
+        color: #ececec
+        font-size: 16px
+        cursor: pointer
+        text-transform: uppercase
+        +md
+            padding-left: 0
+            padding-top: 20px

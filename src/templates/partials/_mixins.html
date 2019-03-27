@@ -1,30 +1,60 @@
-{% macro icon(i) %}
-<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
-{% endmacro %}
-
 {% macro breadcrumbs(props) %}
 <!-- begin breadcrumbs -->
 <ul class="breadcrumbs{% if props.class %}{{ props.class }}{% endif %}">
-	{% for item in props.list %}
-		{% if loop.last %}
-		<li class="breadcrumbs__item">
-			<span>{{ item }}</span>
-		</li>
-		{% else %}
-		<li class="breadcrumbs__item">
-			<a href="#">{{ item }}</a>
-		</li>
-		{% endif %}
-	{% endfor %}
+  {% for item in props.list %}
+  {% if loop.last %}
+  <li class="breadcrumbs__item">
+    <span>{{ item }}</span>
+  </li>
+  {% else %}
+  <li class="breadcrumbs__item">
+    <a href="#">{{ item }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
 </ul>
 <!-- end breadcrumbs -->
 {% endmacro %}
 
-{% macro checkbox(props) %}
-<!-- begin input -->
-<label class="{% if props.radio %}radio{% else %}checkbox{% endif %}{% if props.class %} {{ props.class }}{% endif %}">
-	<input type="{% if props.radio %}radio{% else %}checkbox{% endif %}" name="{{ props.name or 'checkbox' }}"{% if props.checked %} checked{% endif %}>
-	<span class="{% if props.radio %}radio{% else %}checkbox{% endif %}__text">{{ props.text or 'checkbox' }}</span>
-</label>
-<!-- end input -->
+
+{% macro nav(item) %}
+<nav class="nav">
+  <div class="nav__icon blue_icon">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav__list">
+    {% for i in item.list %}
+    {% if item.list %}
+    <li class="nav__item"><a href="#" class="nav__link">{{i}}</a></li>
+    {% endif %}
+    {% endfor %}
+    <div class="header__phone phone_nav">
+      +7 (495) 33 222 11
+    </div>
+  </ul>
+</nav>
+{% endmacro %}
+
+{% macro nav_main(item) %}
+<nav class="nav-main">
+  <div class="nav-main__icon blue_icon">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-main__list">
+    {% for i in item.list %}
+    {% if item.list %}
+    <li class="nav-main__item"><a href="#" class="nav-main__link">{{i}}</a></li>
+    {% endif %}
+    {% endfor %}
+    <div class="header__phone phone_nav">
+      +7 (495) 33 222 11
+    </div>
+  </ul>
+</nav>
 {% endmacro %}

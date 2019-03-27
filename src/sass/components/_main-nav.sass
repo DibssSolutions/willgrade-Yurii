@@ -1,4 +1,34 @@
-.nav
+.main
+    padding-top: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 1
+    // +sm
+    //     justify-content: flex-start
+    &__phone
+        margin-left: 60px
+        +xxl
+            margin-left: 30px
+        +sm
+            display: none
+    &__logo
+        padding-right: 20px
+        +lg
+            padding-left: 60px
+    &__logo img
+        display: block
+        max-width: 100%
+        +md
+            width: 164px
+    & .blue_icon span
+        background-color: #0067df
+    & .header__btn_md
+        background-color: #ffffff
+        border: 2px solid #0067df
+
+.nav-main
 	position: static
 	z-index: 2
 	&__icon
@@ -13,8 +43,8 @@
 			top: 50%
 			left: 0
 			display: block
-		+sm
-			transform: translateY(-35%)
+		// +sm
+		// 	transform: translateY(-35%)
 	&__icon span
 		display: block
 		position: absolute
@@ -40,33 +70,33 @@
 	&.menu_stage_open span:nth-child(2)
 		transform: rotate(45deg)
 		background-color: #0067df
-	&.menu_stage_open .nav__icon span:nth-child(3)
+	&.menu_stage_open .nav-main__icon span:nth-child(3)
 		transform: rotate(-45deg)
 		background-color: #0067df
-	&.menu_stage_open .nav__icon span:nth-child(4)
+	&.menu_stage_open .nav-main__icon span:nth-child(4)
 		top: 18px
 		width: 0%
 		left: 50%
-	&.menu.menu_stage_open .nav__item
+	&.menu.menu_stage_open .nav-main__item
 		+lg
 			display: block
-	&.menu.menu_stage_open .nav__link
+	&.menu.menu_stage_open .nav-main__link
 		+lg
 			display: block
 	&__list
 		transition: 0.5s
 		+lg
-			width: 310px
-			background-color: #ececec
-			position: absolute
-			min-height: 100vh
-			margin: 0 0 0 -30px
-			left: -310px
-			top: 0
-			bottom: 0
-			transition: all ease 0.5s
-			padding-top: 145px
-			padding-left: 60px
+            width: 310px
+            background-color: #ececec
+            position: absolute
+            min-height: 100vh
+            left: -310px
+            top: 0
+            bottom: 0
+            transition: all ease 0.5s
+            padding-top: 145px
+            padding-left: 60px
+            margin: 0 0 0 -30px
 	&__item
 		display: inline-block
 		margin-right: 40px

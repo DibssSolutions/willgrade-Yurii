@@ -1,5 +1,5 @@
 ProjectTitle: template
 
 PageList:
-- file: startPage.html
-  ready: 50
+- file: Page.html
+  ready: 60

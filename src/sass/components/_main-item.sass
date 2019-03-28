@@ -1,5 +1,5 @@
 .main-block
-    min-height: calc(100vh - 139px)
+    min-height: calc(100vh)
     display: flex
     justify-content: space-between
     // padding-top: 28px
@@ -59,6 +59,8 @@
     &__btn
         display: flex
         align-items: center
+        +sm
+            margin-bottom: 20px
     &__btn img
         cursor: pointer
     &__btn span
@@ -67,8 +69,12 @@
         font-size: 16px
         text-transform: uppercase
         padding-left: 25px
+        font-weight: 700
         cursor: pointer
         +lg
             display: block
         +sm
             padding-left: 15px
+            font-size: 14px
+    &__btn_download:hover ~ span
+        display: block

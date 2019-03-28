@@ -1,0 +1,71 @@
+.footer
+    background-color: #0067df
+    min-height: calc(100vh)
+    display: flex
+    overflow: hidden
+    justify-content: space-between 
+    +md
+        flex-direction: column
+    &__left
+        padding-top: 105px
+        padding-left: 75px
+        padding-right: 35px
+        color: #ffffff
+        +md
+            padding: 60px 0 30px 60px
+    &__right
+        background-color: #004596
+        padding: 0
+        +md
+            width: 100%
+            height: 500px
+    &__title
+        color: #ffffff
+        margin-bottom: 50px
+    &__contact
+        border-top: 2px solid #649fe4
+        padding-top: 50px
+    &__map
+        background-image: url(../img/map.png)
+        width: 100%
+        background-position: 53%
+        background-size: cover
+        +md
+                height: 150%
+                background-repeat: no-repeat
+                background-position: 53% -100px
+                background-size: cover
+
+.address
+    display: flex
+    flex-direction: column
+    padding-bottom: 20px
+    &__item
+        margin-bottom: 30px
+    &__title
+        padding-left: 32px
+        position: relative
+        margin-bottom: 20px
+        &:before
+            content: url(../img/address.png)
+            position: absolute
+            left: 0
+    &__desc
+
+.contact
+    &__item
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        +md
+            flex-wrap: wrap
+    &__title
+        min-width: 162px
+        margin-right: 45px
+        +md
+            padding-bottom: 15px
+    &__img
+        margin-right: 20px
+    &__img img
+        display: block
+        cursor: pointer

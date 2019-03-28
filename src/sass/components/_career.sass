@@ -1,43 +1,47 @@
 .bg_black
     height: 100vh
 
-.investment
+.career
     display: flex
-    min-height: calc(100vh)
+    height: calc(100vh)
     background-color: #283038
     +sm
         flex-direction: column-reverse
         justify-content: space-between
     &__left
+        // width: 508px
+        // min-height: 100vh
+        // position: relative
+        // max-width: 100%
         min-width: 325px
-        width: 30% 
+        width: 30%
+        height: 75%
+        align-self: flex-end
         +sm
-            height: 335px
             min-width: 250px
+            height: 33%
+            align-self: flex-start
     &__img
-        background-image: url(../img/item3.png)
+        background-image: url(../img/item5.png)
         position: relative
         width: 100%
         height: 100%
-        background-size: cover
+        background-size: contain
         background-repeat: no-repeat
-        background-position: bottom left
+        background-position: bottom
         +lg
-            background-position: 80% 0%
+            background-position: 59px 100%
+        +sm
+            background-position: 59px 51px
         &:after
             content: ""
             border-right: 1px solid #ececec
             position: absolute
             bottom: 0
-            height: 95%
+            height: 125%
             width: 100%
             +sm
-                border-right: none
-                border-top: 1px solid #ececec
-                right: 50%
-                transform: translateX(50%)
-                width: 95%
-                height: 100%
+                content:  none
     &__right
         padding-top: 210px
         padding-left: 150px
@@ -51,9 +55,16 @@
     &__title
         color: #ececec
         padding-bottom: 50px
+        +sm
+            padding-bottom: 20px
     &__desc
         color: #ececec
     &__desc p
         padding-bottom: 30px
-    &__btn_download:hover ~ span
-        display: block
+    &__btn
+        margin-top: 100px
+        +lg
+            width: 280px
+        +sm
+            width: 220px
+            margin-top: 50px

@@ -4,6 +4,7 @@ title: Willgrade
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
+{# {% include "partials/_main-nav.html" %} #}
 <div id="fullpage">
   <div class="section">
     <div class="header_bg">
@@ -26,8 +27,11 @@ title: Willgrade
   </div>
   <div class="section">
     {% include "partials/_main-nav.html" %}
-      {% include "partials/_main-bg_black.html" %}
-      {% include "partials/_main-item_black.html" %}
+    {% include "partials/_investment.html" %}
+  </div>
+  <div class="section">
+    {% include "partials/_main-nav.html" %}
+    {% include "partials/_development.html" %}
   </div>
 </div>
 {% endblock %}

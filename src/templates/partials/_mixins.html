@@ -39,14 +39,14 @@
 {% endmacro %}
 
 {% macro nav_main(item) %}
-<nav class="nav-main">
-  <div class="nav-main__icon blue_icon">
+<nav class="nav-main js-nav-main">
+  <div class="nav-main__icon blue_icon js-icon">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <ul class="nav-main__list">
+  <ul class="nav-main__list js-list">
     {% for i in item.list %}
     {% if item.list %}
     <li class="nav-main__item"><a href="#" class="nav-main__link">{{i}}</a></li>

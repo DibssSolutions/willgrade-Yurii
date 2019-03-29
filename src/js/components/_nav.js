@@ -1,4 +1,4 @@
-$( '.nav__icon' ).click(function() {
+$( '.nav__ico' ).click(function() {
   $('.nav__list').toggleClass('left');
 });
 
@@ -15,19 +15,19 @@ $(document).on('click', function(hideMenu) {
 });
 
 
-$( '.nav-main__icon' ).click(function() {
-  $('.nav-main__list').toggleClass('left');
+$( '.js-icon' ).click(function() {
+  $('.js-list').toggleClass('left');
 });
 
 
-$('.nav-main__icon').on('click', function() {
-  $(this).closest('.nav-main').toggleClass('menu_stage_open');
+$('.js-icon').on('click', function() {
+  $(this).closest('.js-nav-main').toggleClass('is-open');
 });
 
 $(document).on('click', function(hideMenu) {
-  if (!$(hideMenu.target).closest('.nav-main').length) {
-    $('.nav-main').removeClass('menu_stage_open');
-    $('.nav-main__list').removeClass('left');
+  if (!$(hideMenu.target).closest('.js-nav-main').length) {
+    $('.js-nav-main').removeClass('is-open');
+    $('.js-list').removeClass('left');
   }
 });
 

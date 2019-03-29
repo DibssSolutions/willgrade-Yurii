@@ -34,12 +34,29 @@
 	z-index: 11
 
 .modal
+	&__content
+		box-shadow: 0 2px 33px 2px rgba(28, 34, 40, 0.2)
+		background-color: #ececec
+		text-align: left
 	&__title
 		color: #394550
 		font-family: Gilroy
 		font-size: 48px
 		font-weight: 700
 		letter-spacing: -0.24px
+		+sm
+			font-size: 32px
+	&__subtitle
+		color: #394550
+		font-family: Gilroy
+		font-size: 21px
+		font-weight: 400
+		padding-top: 10px
+	&__role
+		color: #394550
+		font-size: 21px
+		font-weight: 600
+		padding-bottom: 25px
 	&__close
 		right: 29px
 		top: 27px
@@ -51,8 +68,6 @@
 		height: 14px
 .modal-request
 	width: 450px
-	box-shadow: 0 2px 33px 2px rgba(28, 34, 40, 0.2)
-	background-color: #ececec
 	padding: 60px 85px 47px 85px
 	text-align: left
 	+sm
@@ -60,24 +75,67 @@
 		padding: 60px 20px 45px 20px
 	&__title
 		margin-bottom: 50px
-		+sm
-			font-size: 32px
 	&__input
 		width: 100%
 		background-color: transparent
 		padding-bottom: 15px
 		border-bottom: 2px solid #92989e
 		margin-bottom: 20px
-		ccolor: #394550
+		color: #394550
 		font-family: Gilroy
 		font-size: 16px
 		font-weight: 700
 		padding-left: 17px
 	&__input::-webkit-input-placeholder
-		ccolor: #394550
-		font-family: Gilroy
+		color: #394550
+		font-family: Gilroy-Italic
 		font-size: 16px
-		font-weight: 700
+		font-weight: 400
 	&__btn
 		width: 100%
 		margin-top: 30px
+
+.modal-question
+	display: flex
+	padding: 60px 80px 0 15px
+	+sm
+		padding: 60px 30px 30px 30px
+	&__left
+		display: flex
+		padding-right: 35px
+		align-items: flex-end
+		+sm
+			display: none
+	&__right
+		padding-bottom: 25px
+	&__contact
+		padding-top: 35px
+		border-top: 2px solid #92989e
+	&__contact h3
+		font-size: 21px	
+		color: #0067df
+
+.attach
+	margin-top: 10px
+	display: flex
+	align-items: center
+	&__img
+		background-image: url(../img/attach.png)
+		background-repeat: no-repeat
+		display: inline-block
+		width: 50px
+		height: 50px
+		background-position: -5px -5px
+		cursor: pointer
+		&:hover
+			width: 50px
+			height: 50px
+			background-position: -65px -5px
+		&:hover ~ span
+			display: block
+			color: #0067df
+			font-size: 16px
+			font-weight: 600
+			text-transform: uppercase
+			padding-left: 15px
+

@@ -4,7 +4,7 @@ title: Willgrade
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-{#{% include "partials/_main-nav.html" %} #}
+{% include "partials/_main-nav.html" %}
 <div id="fullpage">
   <div class="section">
     <div class="header_bg">
@@ -14,32 +14,34 @@ title: Willgrade
     </div>
   </div>
   <div class="section">
-    <div class="bg_white">
-      {% include "partials/_main-nav.html" %}
+    <div class="inner">
       {% include "partials/_main-item.html" %}
     </div>
   </div>
   <div class="section">
-    <div class="bg_white">
-      {% include "partials/_main-nav.html" %}
+    <div class="inner">
       {% include "partials/_main-item.html" %}
     </div>
   </div>
   <div class="section">
-    {% include "partials/_main-nav.html" %}
-    {% include "partials/_investment.html" %}
+    <div class="inner">
+      {% include "partials/_investment.html" %}
+    </div>
   </div>
   <div class="section">
-    {% include "partials/_main-nav.html" %}
-    {% include "partials/_development.html" %}
+    <div class="inner">
+      {% include "partials/_development.html" %}
+    </div>
   </div>
   <div class="section">
-    {% include "partials/_main-nav.html" %}
-    {% include "partials/_career.html" %}
+    <div class="inner">
+      {% include "partials/_career.html" %}
+    </div>
   </div>
   <div class="section">
-    {% include "partials/_main-nav.html" %}
-    {% include "partials/_footer.html" %}
+    <div class="inner">
+      {% include "partials/_footer.html" %}
+    </div>
   </div>
 </div>
 {% include "partials/_modal.html" %}
